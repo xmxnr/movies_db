@@ -7,10 +7,10 @@ const {
 } = require('../controllers/genre.controllers');
 const express = require('express');
 
-const routerGenre = express.Router();
+const GenreRouter = express.Router();
 
-routerGenre.route('/').get(getAll).post(create);
+GenreRouter.route('/').get(getAll).post(create);
 
-routerGenre.route('/:id').get(getOne).delete(remove).put(update);
+GenreRouter.route('/:id').get(getOne).delete(remove).put(update);
 
-module.exports = routerGenre;
+module.exports = GenreRouter;
